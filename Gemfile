@@ -13,6 +13,8 @@ gem 'useragent',      '~> 0.3.1'
 gem 'pivotal-tracker'
 gem 'ruby-fogbugz',   :require => 'fogbugz'
 
+gem 'unicorn',        '~> 4.0.1'
+
 platform :ruby do
   gem 'bson_ext',     '~> 1.3.1'
 end
