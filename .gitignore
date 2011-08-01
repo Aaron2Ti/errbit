@@ -3,7 +3,6 @@ db/*.sqlite3
 log/*.log
 tmp/**/*
 config/config.yml
-config/mongoid.yml
 certs
 *~
 *.rbc
