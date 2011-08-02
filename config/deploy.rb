@@ -1,10 +1,6 @@
-$:.unshift(File.expand_path('./lib', ENV['rvm_path']))
-
-set :rvm_path, '/home/rvm/.rvm'
-set :rvm_bin_path, '/home/rvm/.rvm/bin'
-set :rvm_type, :user
-set :rvm_ruby_string, '1.9.2'
-require "rvm/capistrano"
+set :default_environment, {
+  'PATH' => '/opt/ruby19/bin:$PATH'
+}
 
 set :application, 'errbit'
 set :domain_name, 'apps.bitzesty.com' # set the domain name
