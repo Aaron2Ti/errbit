@@ -3,7 +3,7 @@ set :default_environment, {
 }
 
 set :application, 'errbit'
-set :domain_name, 'apps.bitzesty.com' # set the domain name
+set :domain_name, 'errbit.apps.bitzesty.com' # set the domain name
 
 set :repository,  'git://github.com/Aaron2Ti/errbit.git'
 set :scm, :git
@@ -39,7 +39,7 @@ namespace :deploy do
   task :start do
     run "cd #{current_path} && \
          bundle exec unicorn \
-           -c config/unicorn.conf.rb \
+           -c #{current_path}/config/unicorn.conf.rb \
            --env production \
            --daemonize"
   end
