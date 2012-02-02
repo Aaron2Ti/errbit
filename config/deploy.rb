@@ -36,12 +36,12 @@ namespace :deploy do
   end
 
   desc 'Start unicorns'
-  task :start do
+  task :start, :roles => :app do
     run "cd #{current_path} && \
-         bundle exec unicorn \
-           -c #{current_path}/config/unicorn.conf.rb \
-           --env production \
-           --daemonize"
+           bundle exec unicorn \
+             -c #{current_path}/config/unicorn.conf.rb \
+             --env #{rails_env} \
+             --daemonize"
   end
 
   desc "Generate unicorn and nginx's config files"
